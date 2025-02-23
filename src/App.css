@@ -1,0 +1,43 @@
+@import "tailwindcss";
+body {
+  overflow-x: hidden;
+}
+@theme {
+  --color-red: #c12329;
+  --color-blue: #1c2752;
+  --color-gray: #7e7e7e;
+  --color-seconary: #f2f2f2;
+}
+@layer components {
+  .nav::after {
+    @apply content-[''] h-[3px] w-0 bg-blue absolute left-0 -bottom-2 rounded-full;
+  }
+  .nav:hover::after {
+    @apply w-[100%] duration-200 ease-in;
+  }
+  .navActive::after {
+    @apply content-[''] h-[3px]  w-[100%] bg-blue absolute left-0 -bottom-2 rounded-full;
+  }
+}
+
+.bg-color-10 {
+  background-color: #f2f2f2;
+}
+.bg-color-20 {
+  background-color: #c12329;
+}
+.bg-color-30 {
+  background-color: #1c2752;
+}
+.bg-color-filter {
+  background-color: rgba(28, 39, 82, 0.6);
+}
+.text-color-1 {
+  color: #1c2752;
+}
+.text-color-3 {
+  color: #c12329;
+}
+.text-color-2 {
+  color: #7e7e7e;
+}
